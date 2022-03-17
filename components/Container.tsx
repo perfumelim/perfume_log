@@ -19,15 +19,14 @@ const Container = (props) => {
         <meta property="og:site_name" content={meta.author} />
       </Head>
       <header
-        className={`w-full max-w-3xl flex flex-row justify-between items-center my-1`}
+        className={`w-full max-w-3xl flex justify-between items-center my-1`}
       >
-        <div className={`flex flex-row items-center`}>
+        <div className={`flex item-center`}>
           <Image
-            src={`/logo.jpg`}
-            alt="로고"
+            src={`/logo.jpeg`}
+            alt="logo"
             width={40}
             height={40}
-            objectFit={`cover`}
             className={`rounded-full`}
           />
           <span className={`mx-2 font-extralight text-lg`}>
