@@ -17,6 +17,7 @@ const Container = (props) => {
         <title>{meta.title}</title>
         <meta content={meta.description} name="description" />
         <meta property="og:site_name" content={meta.author} />
+        <link href="/public/favicon.png" rel="icon" />
       </Head>
       <header
         className={`w-full max-w-3xl flex justify-between items-center my-1`}
