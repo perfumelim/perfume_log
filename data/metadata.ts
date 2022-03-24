@@ -1,7 +1,8 @@
 const metadata = {
-  title: "My Blog",
-  description: "who's blog",
+  title: "Perfume",
+  description: "Perfume's blog",
   author: "PerfumeLim",
+  type: "website",
 };
 
 export default metadata;
