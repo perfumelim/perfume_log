@@ -17,8 +17,6 @@ const Container = (props) => {
   const { resolvedTheme, setTheme } = useTheme();
   useEffect(() => setMounted(true), []);
 
-  console.log("theme?", resolvedTheme);
-
   return (
     <div className={`w-full flex flex-col items-center p-3 dark:bg-gray-900`}>
       <Head>
@@ -30,7 +28,7 @@ const Container = (props) => {
       <header
         className={`w-full max-w-3xl flex justify-between items-center my-1`}
       >
-        <div className={`flex item-center`}>
+        <div className={`flex items-center`}>
           <Image
             src={`/profile.jpeg`}
             alt="profile"
@@ -39,7 +37,7 @@ const Container = (props) => {
             className={`rounded-full`}
           />
           <span className={`mx-2 font-extralight text-lg`}>
-            {metadata.title}
+            {metadata.author}
           </span>
         </div>
         <div className={`flex items-center`}>

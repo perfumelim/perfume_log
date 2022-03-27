@@ -1,7 +1,7 @@
 const metadata = {
-  title: "Perfume",
+  title: "Perfume's log",
   description: "Perfume's blog",
-  author: "PerfumeLim",
+  author: "Perfume Lim",
   type: "website",
 };
 
