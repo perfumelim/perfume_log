@@ -16,8 +16,11 @@ const Container = (props) => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
   useEffect(() => setMounted(true), []);
+
+  console.log("theme?", resolvedTheme);
+
   return (
-    <div className={`w-full flex flex-col items-center p-3`}>
+    <div className={`w-full flex flex-col items-center p-3 dark:bg-gray-900`}>
       <Head>
         <title>{meta.title}</title>
         <meta content={meta.description} name="description" />
@@ -44,7 +47,7 @@ const Container = (props) => {
           <button
             aria-label="Toggle Dark Mode"
             type="button"
-            className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+            className="w-9 h-9 bg-sky-100 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
             onClick={() =>
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }
