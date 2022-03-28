@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
 import metadata from "../data/metadata";
-import Link from "next/link";
 import Nav from "./Nav";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
