@@ -4,6 +4,9 @@ import metadata from "../data/metadata";
 import Nav from "./Nav";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+import navlinks from "data/navlinks";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Container = (props) => {
   const meta = {
@@ -16,6 +19,7 @@ const Container = (props) => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
   useEffect(() => setMounted(true), []);
+  const router = useRouter();
 
   return (
     <div className={`w-full flex flex-col items-center p-3 dark:bg-gray-900`}>
@@ -29,17 +33,21 @@ const Container = (props) => {
       <header
         className={`w-full max-w-3xl flex justify-between items-center my-1`}
       >
-        <div className={`flex items-center`}>
-          <Image
-            src={`/profile.jpeg`}
-            alt="profile"
-            width={40}
-            height={40}
-            className={`rounded-full`}
-          />
-          <span className={`mx-2 font-extralight text-lg`}>
-            {metadata.author}
-          </span>
+        <div>
+          <Link href={navlinks[2].link} passHref>
+            <a className={`flex items-center`}>
+              <Image
+                src={`/profile.jpeg`}
+                alt="profile"
+                width={40}
+                height={40}
+                className={`rounded-full`}
+              />
+              <span className={`mx-2 font-light text-lg`}>
+                {metadata.author}
+              </span>
+            </a>
+          </Link>
         </div>
         <div className={`flex items-center`}>
           <Nav />
