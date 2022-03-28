@@ -57,7 +57,7 @@ module.exports = {
             },
             blockquote: {
               borderLeftColor: theme("colors.gray.700"),
-              color: theme("colors.gray.300"),
+              color: theme("colors.gray.100"),
             },
             "h2,h3,h4": {
               color: theme("colors.gray.100"),
