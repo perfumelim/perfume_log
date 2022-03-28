@@ -1,4 +1,5 @@
 import Container from "components/Container";
+import GiscusBox from "components/GiscussBox";
 import { allPosts } from "contentlayer/generated";
 import { InferGetStaticPropsType } from "next";
 import { useMDXComponent } from "next-contentlayer/hooks";
@@ -15,8 +16,9 @@ const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Container customMeta={customMeta}>
       <div className="mt-10 prose">
-        <h1 className="text-rose-500">{post.title}</h1>
+        <h1 className="text-blue-500">{post.title}</h1>
         <MDXComponent />
+        <GiscusBox slug={post._raw.flattenedPath} />
       </div>
     </Container>
   );
