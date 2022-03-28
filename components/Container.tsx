@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import metadata from "../data/metadata";
+import Link from "next/link";
 import Nav from "./Nav";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
@@ -23,7 +24,8 @@ const Container = (props) => {
         <title>{meta.title}</title>
         <meta content={meta.description} name="description" />
         <meta property="og:site_name" content={meta.author} />
-        <link href="/public/favicon.png" rel="icon" />
+        <meta property="og:site_description" content={meta.description} />
+        <link href="/public/new_favicon.png" rel="icon" />
       </Head>
       <header
         className={`w-full max-w-3xl flex justify-between items-center my-1`}
@@ -47,7 +49,7 @@ const Container = (props) => {
             type="button"
             className="w-9 h-9 bg-sky-100 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
             onClick={() =>
-              setTheme(resolvedTheme === "dark" ? "light" : "dark")
+              setTheme(resolvedTheme === "light" ? "dark" : "light")
             }
           >
             {mounted && (
