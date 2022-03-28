@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ko">
         <Head>
-          <link href="/favicon.png" rel="icon" />
+          <link href="/new_favicon.png" rel="icon" />
         </Head>
         <body>
           <Main />
