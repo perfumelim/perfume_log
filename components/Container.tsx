@@ -26,8 +26,11 @@ const Container = (props) => {
       <Head>
         <title>{meta.title}</title>
         <meta content={meta.description} name="description" />
-        <meta property="og:site_name" content={meta.author} />
-        <meta property="og:site_description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:site_name" content={meta.title} />
+        <meta property="og:image" content="public/ocean.jpeg" />
+        <meta property="og:description" content={meta.description} />
+
         <link href="/public/new_favicon.png" rel="icon" />
       </Head>
       <header
