@@ -5,7 +5,7 @@ const metadata = {
   repo: "https://github.com/perfumelim/about_perfume",
   giscus: {
     id: "perfumelim",
-    repo: "about_perfume",
+    repo: "perfume_log",
     category: "General",
   },
 };
