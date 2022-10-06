@@ -12,7 +12,7 @@ const GiscusBox = ({ slug }: { slug: string }) => {
       term={slug}
       reactionsEnabled="1"
       emitMetadata="0"
-      theme="transparent_dark"
+      theme="dark_dimmed"
     />
   );
 };

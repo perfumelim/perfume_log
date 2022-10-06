@@ -17,7 +17,7 @@ const Post = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
     <Container customMeta={customMeta}>
       <div className="mt-10 prose">
         <h1 className="text-blue-500">{post.title}</h1>
-        <MDXComponent />
+        <MDXComponent className="text-blue-500" />
         <GiscusBox slug={post._raw.flattenedPath} />
       </div>
     </Container>
